@@ -113,8 +113,8 @@ services:
     container_name: dmoj_nginx
     image: nginx:alpine
     restart: always
-    ports:
-      - 80:80
+    # ports:
+    #   - 80:80
     volumes:
       - assets:/assets/
       - pdfcache:/pdfcache/
