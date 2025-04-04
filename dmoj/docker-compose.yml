@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: ./base/Dockerfile
-    image:  base-image 
+    image:  base-image:latest
     network_mode: none
   db:
     container_name: dmoj_mysql
