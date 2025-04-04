@@ -1,4 +1,4 @@
-FROM ninjaclasher/dmoj-base:latest
+FROM base-image:latest 
 
 EXPOSE 9999
 EXPOSE 9998

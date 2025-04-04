@@ -1,5 +1,11 @@
 version: '3.7'
 services:
+  base:
+    build:
+      context: .
+      dockerfile: ./base/Dockerfile
+    image:  base-image 
+    network_mode: none
   db:
     container_name: dmoj_mysql
     image: mariadb
@@ -41,12 +47,6 @@ services:
     volumes:
       - ./mathoid/config.yaml:/node_modules/mathoid/config.yaml
     networks: [site]
-  base:
-    build:
-      context: .
-      dockerfile: ./base/Dockerfile
-    image: ninjaclasher/dmoj-base
-    network_mode: none
   site:
     build:
       context: .
