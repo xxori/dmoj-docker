@@ -21,16 +21,16 @@ services:
     init: true
     restart: unless-stopped
     networks: [site]
-  pdfoid:
-    build:
-      context: .
-      dockerfile: ./pdfoid/Dockerfile
-    image: ninjaclasher/dmoj-pdfoid
-    init: true
-    restart: unless-stopped
-    networks: [site]
-    cap_add:
-      - SYS_ADMIN
+#  pdfoid:
+#    build:
+#      context: .
+#      dockerfile: ./pdfoid/Dockerfile
+#    image: ninjaclasher/dmoj-pdfoid
+#    init: true
+#    restart: unless-stopped
+#    networks: [site]
+#    cap_add:
+#      - SYS_ADMIN
   mathoid:
     build:
       context: .
