@@ -1,3 +1,3 @@
-FROM base-image:latest 
+FROM xxori/dmoj-base:latest 
 
 ENTRYPOINT celery -A dmoj_celery worker -l info --concurrency=2

@@ -1,4 +1,4 @@
-FROM base-image:latest 
+FROM xxori/dmoj-base:latest 
 
 EXPOSE 9999
 EXPOSE 9998
