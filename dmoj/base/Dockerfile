@@ -1,4 +1,4 @@
-FROM python:3.11-slim-bookworm
+FROM python:3.12-slim-bookworm
 
 RUN apt-get update && \
     apt-get install -y \
@@ -13,7 +13,7 @@ RUN apt-get update && \
 
 RUN npm install -g sass postcss-cli postcss autoprefixer
 RUN pip3 install \
-        pymysql mysqlclient websocket-client uwsgi django-redis redis
+        pymysql mysqlclient websocket-client django-redis redis django-recaptcha uwsgi setuptools wheel
 
 COPY repo/requirements.txt .
 RUN pip3 install -r requirements.txt
